@@ -17,10 +17,8 @@ def intersection_list(list1,list2):
         for item_l2 in list2:
             print(item_l2)
             if item_l1 == item_l2:
-                print('first element value', item_l1)
-                print('second element value', item_l2)
-        return item_l1
-
+                print('first element value', item_l1,"and ",item_l2)
+                return item_l1
 intersection_list(first_list, second_list)
 
 
