@@ -8,6 +8,8 @@
 # In this example, assume nodes with the same value are the exact same node objects.
 # Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
 
+#  !!! Made only with regular lists
+
 first_list = [3, 7, 8, 10]
 second_list = [99, 1, 8, 10]
 
@@ -20,6 +22,7 @@ def intersection_list(list1,list2):
                 print('first element value', item_l1,"and ",item_l2)
                 return item_l1
 intersection_list(first_list, second_list)
+
 
 
 
