@@ -7,3 +7,9 @@
 # For example, given A = 3 -> 7 -> 8 -> 10 and B = 99 -> 1 -> 8 -> 10, return the node with value 8.
 # In this example, assume nodes with the same value are the exact same node objects.
 # Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
+
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.val = value
+        self.left = left
+        self.right = right
