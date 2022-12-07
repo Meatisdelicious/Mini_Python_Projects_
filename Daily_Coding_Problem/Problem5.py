@@ -12,7 +12,7 @@ from heapq import heappush, heappop
 
 class Time_table_management:
 
-    def min_Meeting_Rooms(self, intervals):
+    def Min_meeting_rooms(self, intervals):
         # in the case we don't have any interval (single instead of pair)
         if not intervals:
             return 0
@@ -42,6 +42,6 @@ class Time_table_management:
 if __name__ == "__main__":
     time_table_management = Time_table_management()
 
-    time_intervals = (30, 75), (0, 50), (60, 150)
+    time_intervals = [(30, 75), (0, 50), (60, 150)]
     print(type(time_intervals))
-    print(time_table_management.min_Meeting_Rooms(time_intervals))
+    print(time_table_management.Min_meeting_rooms(time_intervals))
