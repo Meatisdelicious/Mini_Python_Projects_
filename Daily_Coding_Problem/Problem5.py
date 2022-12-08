@@ -45,3 +45,6 @@ if __name__ == "__main__":
     time_intervals = [(30, 75), (0, 50), (60, 150)]
     print(type(time_intervals))
     print(time_table_management.Min_meeting_rooms(time_intervals))
+
+
+# problem the tuple --> à résoudre
