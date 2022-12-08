@@ -23,7 +23,8 @@ def check(myString):
         elif i in closed_parenthesis:
             # gets the index of the closed parenthesis (it's position) in the myString
             position = closed_parenthesis.index(i)
-            #
+            print("test3: ", stack, "|open_par_pos: ", open_parenthesis[position],"|stack[-1]: ", stack[-1])
+            # problem --> don't understant, ask teacher tomorrow
             if stack and open_parenthesis[position] == stack[-1]:
                 stack.pop()
             else:
