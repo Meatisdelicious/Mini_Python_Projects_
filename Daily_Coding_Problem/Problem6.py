@@ -10,6 +10,7 @@
 open_parenthesis = ["[", "{", "("]
 closed_parenthesis = ["]", "}", ")"]
 
+
 def check(myString):
     # method using stacks
     stack = []
@@ -22,10 +23,8 @@ def check(myString):
         # 2nd case,
         elif i in closed_parenthesis:
             # gets the index of the closed parenthesis (it's position) in the myString
-            position = closed_parenthesis.index(i)
-            print("test3: ", stack, "|open_par_pos: ", open_parenthesis[position],"|stack[-1]: ", stack[-1])
-            # problem --> don't understant, ask teacher tomorrow
-            if stack and open_parenthesis[position] == stack[-1]:
+            # Enfin comprisssss !!!!!!!!!
+            if len(stack) > 0 and open_parenthesis[closed_parenthesis.index(i)] == stack[-1]:
                 stack.pop()
             else:
                 return "Unbalanced"
@@ -33,6 +32,21 @@ def check(myString):
         return "Balanced"
     else:
         return "Unbalanced"
+
+
+# Optimised code
+def is_nested(myString):
+    stack = []
+    for i in myString:
+        if i in open_parenthesis:
+            stack.append(i)
+        elif i in closed_parenthesis:
+            if stack and open_parenthesis[closed_parenthesis.index(i)] == stack[-1]:
+                stack.pop()
+            else:
+                return False
+    return not stack
+
 
 # to test :
 string1 = "{aoizxa[]{()}}"
