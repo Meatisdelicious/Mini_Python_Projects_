@@ -13,8 +13,10 @@
 def encode(message):
   encoded_message = ""
   i = 0
+  # Iteration through the message
   while (i <= len(message) - 1):
     count = 1
+    # getting the character index
     ch = message[i]
     j = i
     while (j < len(message) - 1):
