@@ -13,7 +13,7 @@
 def encode(message):
   encoded_message = ""
   i = 0
-  # Iteration through the message
+  # Iteration through the message until the end of the message --> Hence the len(msg)-1 <-> to msg[-1]
   while (i <= len(message) - 1):
     count = 1
     # getting the character index
