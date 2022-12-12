@@ -30,16 +30,26 @@ class Solution:
             i = j + 1
         return encoded_message
 
-    def decode(self, s):
-        output = ""
+    def decode(self, encoded_message):
+        # implementing 2 empty chars
+        decoded_message = ""
         num = ""
-        for i in s:
+        # Iterating through the encoded_message
+        for i in encoded_message:
+            # to detect which character is a letter (a-z)
+            print("i :", i)
             if i.isalpha():
-                output += i * int(num)
+                print("i2 :", i)
+                print("num :", num)
+                decoded_message += i * int(num)
+                print(decoded_message)
+                # on reset le string num à chaque itération
+                # pour laisser place au prochain nombre et repeter le process
                 num = ""
+            # if i is a number --> add it to the string num=""
             else:
                 num += i
-        return output
+        return decoded_message
 
 
 # Test program
