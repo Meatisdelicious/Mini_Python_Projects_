@@ -33,7 +33,6 @@ def check(myString):
     else:
         return "Unbalanced"
 
-
 # Optimised code
 def is_nested(myString):
     stack = []
@@ -46,7 +45,6 @@ def is_nested(myString):
             else:
                 return False
     return not stack
-
 
 # to test :
 string1 = "{aoizxa[]{()}}"
