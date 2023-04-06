@@ -12,15 +12,22 @@
 # and append a “g”.
 # Given two strings, compute the edit distance between them
 
-# adding comment
-#adding another comment
-#adding another comments
-#adding another comment
-#adding another comment
-#adding another comment
-#adding another comment
-#adding another comment
-#adding another comment
-#adding another comment
 
+word1 = "kitten"
+word2 = "sitting"
 
+def check_equal_strings(word,word_to_compare_to):
+    if word1==word2:
+        print("both words are equal")
+    else :
+        print("strings are not equal")
+    return
+# check_equal_strings(word1,word2)
+
+for caracter in range(len(word1)) :
+    print(caracter)
+    if word1[caracter] != word2[caracter]:
+        print("not equal")
+        break
+else : 
+    print("equal")
