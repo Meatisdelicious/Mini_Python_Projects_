@@ -38,12 +38,12 @@ class Solution:
         # Iterating through the encoded_message
         for i in encoded_message:
             # to detect which character is a letter (a-z)
-            print("i :", i)
+            # print("i :", i)
             if i.isalpha():
-                print("i2 :", i)
-                print("num :", num)
+                #print("i2 :", i)
+                #print("num :", num)
                 decoded_message += i * int(num)
-                print(decoded_message)
+                # print(decoded_message)
                 # on reset le string num à chaque itération
                 # pour laisser place au prochain nombre et repeter le process
                 num = ""
