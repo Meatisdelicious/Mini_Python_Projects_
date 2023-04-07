@@ -42,6 +42,7 @@ def min_steps_to_reach_end(matrix, start, end):
     """
     num_rows = len(matrix)
     num_cols = len(matrix[0])
+    # After this, not well understood...
     queue = deque([(start[0], start[1], 0)])  # Using a deque for BFS
     visited = set([(start[0], start[1])])  # Keep track of visited coordinates
     directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]  # Possible directions to move
