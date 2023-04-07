@@ -1,7 +1,6 @@
 from xml.dom.minidom import Entity
 from ursina import *
 
-
 app = Ursina()
 camera.orthographic = True
 camera.fov = 10
