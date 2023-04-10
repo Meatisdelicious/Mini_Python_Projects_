@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from ursina import *
 
 app = Ursina()
@@ -14,3 +15,14 @@ car = Entity(
 app.run()
 
 ## testing git repo
+=======
+from xml.dom.minidom import Entity
+from ursina import *
+
+app = Ursina()
+camera.orthographic = True
+camera.fov = 10
+
+car = Entity(module='quad',texture='assets\car',collide='box',scale=(2,1),rotation_z=-90)
+app.run()
+>>>>>>> e5f78c7f51aef8dfe1f7556e70adf40f5142f362
