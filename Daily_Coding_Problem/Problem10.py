@@ -19,6 +19,7 @@
 # 2     ---> 2,1,5,7,2,0,5 --> 0,1,2,2,5,5,7 --> = 2
 
 number_list = [2, 1, 5, 7, 2, 0, 5]
+sorted_list = [0, 1, 2, 2, 5, 5, 7]
 def median_of_list(random_list):
     temp_list=[]
     for i in random_list:
@@ -27,19 +28,24 @@ def median_of_list(random_list):
 
         # if we have a list that has a pair lenght
         if len(sorted_temp_list)%2 == 0:
-            print("pair list")
-            print(sorted_temp_list)
+            middle1,middle2 = Middle_index_list(sorted_temp_list)
+            mediane1 = (sorted_temp_list[middle1] + sorted_temp_list[middle2]) / 2
+            print("---Mediane---", mediane1)
 
         # if we have a list that has an impair lenght
         if len(sorted_temp_list)%2 == 1 :
-            print("impair list")
-            print(sorted_temp_list)
             # -0.5 to make sure we don't get an float
-            middle_list_index = int( (len(sorted_temp_list)+1)/2 - 0.5)
-            # print("middle_list_index",middle_list_index)
-            print("---Mediane--- :", sorted_temp_list[middle_list_index])
-            
-
+            middle_list_index = int((len(sorted_temp_list)+1)//2 - 0.5)
+            mediane2 = sorted_temp_list[middle_list_index]
+            print("---Mediane--- :", mediane2 )
     return 
+
+def Middle_index_list(list):
+    middle = len(list) // 2
+    # calculating the two middle indexes
+    middle1 = middle -1
+    middle2 = middle
+    # getting index from list 
+    return middle1,middle2
 
 median_of_list(number_list)
