@@ -47,5 +47,5 @@ def valid_parenthsis(string_s):
         return "unbalanced"
 
 print(valid_parenthsis(s))
-# print(valid_parenthsis(s2))
-# print(valid_parenthsis(s3))
+print(valid_parenthsis(s2))
+print(valid_parenthsis(s3))
