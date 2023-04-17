@@ -1,4 +1,4 @@
-# Valid paranthesis 
+# Valid parenthesis 
 
 # Given a string s containing just the characters '(', ')', '{', '}', '[' and ']'
 # ,determine if the input string is valid.
@@ -20,3 +20,12 @@
 # Example 3:
 # Input: s = "(]"
 # Output: false
+
+s = "()"
+def valid_parenthsis(string_s):
+
+    for element in string_s:
+        print(element)
+
+    return
+valid_parenthsis(s)
