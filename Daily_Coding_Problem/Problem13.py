@@ -1,3 +1,5 @@
+# Two sums 
+
 # Link to study plan easy problems : 
 # https://www.techinterviewhandbook.org/grind75
 
@@ -29,8 +31,6 @@ target2 = 6
 # ex3
 nums3 = [3,3], 
 target3 = 6
-
-
 
 def Two_sums(array, target):
 
