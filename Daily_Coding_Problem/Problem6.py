@@ -33,7 +33,7 @@ def check(myString):
     else:
         return "Unbalanced"
 
-# Optimised code
+# Optimised code version
 def is_nested(myString):
     stack = []
     for i in myString:
