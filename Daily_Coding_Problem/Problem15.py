@@ -16,11 +16,14 @@
 # Example 3:
 # Input: list1 = [], list2 = [0]
 # Output: [0]
+
 first_list = [1,2,4]
 second_list = [1,3,4] 
+
 def two_sorted_lists(list1,list2):
     for i in list1:
         list2.append(i)
     list2.sort()
     return list2
+
 print(two_sorted_lists(first_list,second_list))
