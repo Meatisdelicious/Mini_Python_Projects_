@@ -1,4 +1,4 @@
-# Two sums 
+# 1 Two sums 
 
 # Link to study plan easy problems : 
 # https://www.techinterviewhandbook.org/grind75
