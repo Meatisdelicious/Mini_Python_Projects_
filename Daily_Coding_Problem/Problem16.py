@@ -21,19 +21,18 @@
 # Explanation: In this case, no transactions are done and the max profit = 0.
 
 def maxProfit(prices):
-    buy = 0
-    sell = 1
+    buy = prices[0]
     max_profit = 0
-    while sell < len(prices):
-        if prices[sell] > prices[buy]:
-            profit = prices[sell] - prices[buy]
-            max_profit = max(profit, max_profit)
-        else:
-            buy = sell
-        sell = sell + 1
-    return max_profit
+    for i in range(1, len(prices)):     
+        ## Checking for lower buy value
+        if (buy > prices[i]):
+            buy = prices[i]
+        ## Checking for higher profit
+        elif (prices[i] - buy > max_profit):
+            max_profit = prices[i] - buy;
+    return max_profit;
 
-prices = [7,1,5,3,6,4]
+prices = [ 7, 1, 5, 6, 4 ]
 print("max_profit :",maxProfit(prices))
 
 
