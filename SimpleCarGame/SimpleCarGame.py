@@ -12,5 +12,3 @@ car = Entity(
     rotation_z=-90
 )
 app.run()
-
-## testing git repo
