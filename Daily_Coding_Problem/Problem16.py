@@ -24,15 +24,19 @@ prices = [7,1,5,3,6,4]
 
 def Best_time(price_list):
     profit_list=[]
+    list_result=[]
+    index_list = []
     for i in price_list:
         print("i--",i)
         for j in range(1,len(price_list),1):
             print("j----",price_list[j])
-            if i-price_list[j]>0:
-                # print("profit :",i-price_list[j])
-                profit_list.append(i-price_list[j])
-                max_profit = max(profit_list)
-                index
+            profit_list.append(i-price_list[j])
+            index_I = price_list.index(i)
+            index_J = price_list[j]
+            index_list.append(index_I)
+            index_list.append(index_J)
+    print("index_list",index_list)       
+    print("max_profit =",max(profit_list))
     return profit_list
 
 print(Best_time(prices))
