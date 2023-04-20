@@ -24,11 +24,13 @@
 # Output: true
 # Explanation: s is an empty string "" after removing non-alphanumeric characters.
 # Since an empty string reads the same forward and backward, it is a palindrome.
+import re
+def Valid_palindrome(string):
+    pre_processed_string = re.sub(r'[^a-zA-Z0-9]', '', string)
+    print(pre_processed_string)
+    return 
+
 s = "A man, a plan, a canal: Panama"
 s2= "race a car"
 s3= " "
-def Valid_palindrome(string):
-
-
-    return 
 print(Valid_palindrome(s))
