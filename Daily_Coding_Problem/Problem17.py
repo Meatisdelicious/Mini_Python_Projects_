@@ -24,11 +24,13 @@
 # Output: true
 # Explanation: s is an empty string "" after removing non-alphanumeric characters.
 # Since an empty string reads the same forward and backward, it is a palindrome.
+
 import re
 def Valid_palindrome(string):
     temp_string = re.sub(r'[^a-zA-Z0-9]', '', string)
     pre_processed_string=temp_string.lower()
     string_to_list =[]
+
     for i in pre_processed_string:
         string_to_list.append(i)
 
