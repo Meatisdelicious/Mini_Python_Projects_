@@ -16,28 +16,20 @@
 
 
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+class Solution:
+    def invert_tree(self, root=0, left=None, right=None):
+        if not root: 
+            return None
 
-def dfs(node):
-    if node:
-        dfs(node.left)
-        print(node.val)
-        dfs(node.right)
+        self.invert(root)
+        return root
+    
+    # node = noeud ( ici on cherche à inverser 2 feuilles)
+    def invert(self, node):
+        if not node:
+            return None
+        print(self.invert(node.left))
+        print(self.invert(node.right))
 
-# create a binary tree
-root = TreeNode(4)
-root.left = TreeNode(2)
-root.right = TreeNode(7)
-root.left.left = TreeNode(1)
-root.left.right = TreeNode(3)
-root.right.left = TreeNode(6)
-root.right.right = TreeNode(9)
-
-# iterate through the binary tree using depth-first search
-dfs(root)
-root = [4,2,7,1,3,6,9]
-
+        node.left, node.right = node.right,node.left
+        return node
