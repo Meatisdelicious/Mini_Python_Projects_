@@ -15,3 +15,29 @@
 # Output: []
 
 
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def dfs(node):
+    if node:
+        dfs(node.left)
+        print(node.val)
+        dfs(node.right)
+
+# create a binary tree
+root = TreeNode(4)
+root.left = TreeNode(2)
+root.right = TreeNode(7)
+root.left.left = TreeNode(1)
+root.left.right = TreeNode(3)
+root.right.left = TreeNode(6)
+root.right.right = TreeNode(9)
+
+# iterate through the binary tree using depth-first search
+dfs(root)
+root = [4,2,7,1,3,6,9]
+
