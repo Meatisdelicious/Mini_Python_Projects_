@@ -14,8 +14,6 @@
 # Input: root = []
 # Output: []
 
-
-
 class Solution:
     def invert_tree(self, root=0, left=None, right=None):
         if not root: 
