@@ -40,5 +40,5 @@ print(valid_anagram(s1, t1))
 
 
 # optimised version :
-def isAnagram(self, s: str, t: str) -> bool:
-    return all(s.count(x) == t.count(x) for x in string.ascii_lowercase)
+# def isAnagram(self, s: str, t: str) -> bool:
+#     return all(s.count(x) == t.count(x) for x in string.ascii_lowercase)
