@@ -28,12 +28,48 @@
 # Explanation: The starting pixel is already colored 0,
 # so no changes are made to the image.
 
-def flood_fill(image, sr, sc, color):
-    return
+def floodFill(image, sr, sc, newColor):
+    """
+    :type image: List[List[int]]
+    :type sr: int
+    :type sc: int
+    :type newColor: int
+    :rtype: List[List[int]]
+    """
+    # Check if the starting pixel has the same color as the new color
+    if image[sr][sc] == newColor:
+        return image
+
+    # Define a helper function to perform the flood fill recursively
+    def dfs(r, c):
+        # Check if the current pixel is within the bounds of the image
+        if r < 0 or r >= len(image) or c < 0 or c >= len(image[0]):
+            return
+        # Check if the current pixel has the same color as the starting pixel
+        if image[r][c] == startColor:
+            # Update the color of the current pixel
+            image[r][c] = newColor
+            # Recursively perform the flood fill on the adjacent pixels
+            dfs(r+1, c)
+            dfs(r-1, c)
+            dfs(r, c+1)
+            dfs(r, c-1)
+
+    # Get the starting color of the image
+    startColor = image[sr][sc]
+    # Perform the flood fill starting from the specified pixel
+    dfs(sr, sc)
+    # Return the modified image
+    return image
 
 
 image = [[1, 1, 1], [1, 1, 0], [1, 0, 1]]
 sr = 1
 sc = 1
 color = 2
-print(flood_fill(image, sr, sc, color))
+print(floodFill(image, sr, sc, color))
+image1 = [[0, 0, 0], [0, 0, 0]]
+sr1 = 0
+sc1 = 0
+color1 = 0
+print(floodFill(image1, sr1, sc1, color1))
