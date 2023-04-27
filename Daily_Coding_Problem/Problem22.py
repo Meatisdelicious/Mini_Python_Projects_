@@ -24,3 +24,19 @@
 
 # Input: root = [2,1], p = 2, q = 1
 # Output: 2
+
+def lowestCommonAncestor(root,p,q):
+    return
+
+root = [6,2,8,0,4,7,9,None,None,3,5]
+p = 2
+q = 8
+print(lowestCommonAncestor(root,p,q))
+root1 = [6,2,8,0,4,7,9,None,None,3,5]
+p1 = 2
+q1 = 4
+
+root = [2,1]
+p = 2
+q = 1
+
