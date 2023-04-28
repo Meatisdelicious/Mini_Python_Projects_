@@ -27,10 +27,10 @@
 
 
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 
 class Solution(object):
@@ -50,6 +50,6 @@ class Solution(object):
             return False
 
 
-head = [3, 2, 0, -4]
-pos = 1
-print(hasCycle(head, pos))
+head1 = [3, 2, 0, -4]
+pos1 = 1
+print(Solution.hasCycle(head1, pos1))
