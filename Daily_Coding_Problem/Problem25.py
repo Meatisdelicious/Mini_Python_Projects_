@@ -49,11 +49,11 @@ def peek():
     """
 
 
-def empty():
-    """
-    :rtype: bool
-    """
-    return
+def empty(queue):
+    if len(queue) == 0:
+        return True
+    else:
+        return False
 
 
 queue = []
