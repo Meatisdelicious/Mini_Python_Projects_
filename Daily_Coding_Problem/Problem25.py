@@ -43,10 +43,9 @@ def pop(x, queue):
     return queue
 
 
-def peek():
-    """
-    :rtype: int
-    """
+def peek(queue):
+    result = queue[0]
+    return result
 
 
 def empty(queue):
@@ -59,3 +58,4 @@ def empty(queue):
 queue = []
 print(push(1, queue))
 print(push(2, queue))
+print(peek(queue))
