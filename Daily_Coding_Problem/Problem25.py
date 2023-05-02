@@ -38,9 +38,10 @@ def push(x, queue):
     return queue
 
 
-def pop(x, queue):
-
-    return queue
+def pop(queue):
+    del_element = queue[0]
+    queue.remove(del_element)
+    return del_element
 
 
 def peek(queue):
@@ -59,3 +60,5 @@ queue = []
 print(push(1, queue))
 print(push(2, queue))
 print(peek(queue))
+print(pop(queue))
+print(empty(queue))
