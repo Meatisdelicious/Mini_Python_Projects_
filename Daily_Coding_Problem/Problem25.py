@@ -32,3 +32,30 @@
 # myQueue.peek(); // return 1
 # myQueue.pop(); // return 1, queue is [2]
 # myQueue.empty(); // return false
+
+def push(x, queue):
+    queue.append(x)
+    return queue
+
+
+def pop(x, queue):
+
+    return queue
+
+
+def peek():
+    """
+    :rtype: int
+    """
+
+
+def empty():
+    """
+    :rtype: bool
+    """
+    return
+
+
+queue = []
+print(push(1, queue))
+print(push(2, queue))
