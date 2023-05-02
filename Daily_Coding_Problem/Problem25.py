@@ -56,9 +56,33 @@ def empty(queue):
         return False
 
 
-queue = []
-print(push(1, queue))
-print(push(2, queue))
-print(peek(queue))
-print(pop(queue))
-print(empty(queue))
+# queue = []
+# print(push(1, queue))
+# print(push(2, queue))
+# print(peek(queue))
+# print(pop(queue))
+# print(empty(queue))
+
+
+class MyQueue(object):
+    def __init__(self):
+        self.queue = []
+
+    def push(self, x):
+        self.queue.append(x)
+        return self.queue
+
+    def pop(self):
+        del_element = self.queue[0]
+        self.queue.remove(del_element)
+        return del_element
+
+
+obj = MyQueue()
+print(obj.push(1))
+print(obj.push(2))
+print(obj.pop())
+
+# param_2 = obj.pop()
+# param_3 = obj.peek()
+# param_4 = obj.empty()
