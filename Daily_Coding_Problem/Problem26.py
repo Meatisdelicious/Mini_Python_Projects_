@@ -24,3 +24,24 @@
 # Example 2:
 # Input: n = 1, bad = 1
 # Output: 1
+def isBadVersion(version):
+    return
+
+
+class Solution:
+    def firstBadVersion(self, n):
+        if n == 1:
+            return 1
+        begin = 1
+        end = n
+        while begin < end:
+            mid = begin+(end-begin)/2
+            if isBadVersion(mid):
+                end = mid
+            else:
+                begin = mid+1
+        return int(begin)
+
+
+sol = Solution()
+sol.firstBadVersion(4)
