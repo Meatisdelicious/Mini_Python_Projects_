@@ -19,8 +19,16 @@
 # Output: true
 
 
-#testing commit 
-#testing commit 
-#testing commit 
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        for caracter in ransomNote:
+            for caracter2 in magazine:
+                wasa=1
+        return 
+    
+sol = Solution()
 
-
+ransomNote="a"
+magazine="b"
+sol.canConstruct(ransomNote,magazine)
+        
