@@ -21,14 +21,24 @@
 
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
-        for caracter in ransomNote:
-            for caracter2 in magazine:
-                wasa=1
-        return 
+        temp = []
+        for char_r in ransomNote:
+            for char_m in magazine :
+                if char_r in char_m:
+                    temp.append(char_r)
+                    print(temp)
+                    if len(temp) == len(ransomNote):
+                        return True
+                else :
+                    return False
     
 sol = Solution()
-
-ransomNote="a"
-magazine="b"
-sol.canConstruct(ransomNote,magazine)
-        
+ransomNote1="a"
+magazine1="b"
+print(sol.canConstruct(ransomNote1,magazine1))
+ransomNote1="aa"
+magazine1="ab"
+print(sol.canConstruct(ransomNote1,magazine1))
+ransomNote2="aa"
+magazine2="aab"
+print(sol.canConstruct(ransomNote2,magazine2))       
