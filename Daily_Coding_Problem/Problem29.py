@@ -19,9 +19,13 @@
 class Solution(object):
     def longestPalindrome(self, s):
         letters = {}
+
+        # converts string to dictionary
         for char in s:
+            # if it's not in our dictionary--> add it
             if char not in letters:
                 letters[char] = 1
+            # if it is...
             else:
                 letters[char] += 1
 
