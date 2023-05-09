@@ -14,3 +14,43 @@
 # Input: s = "a"
 # Output: 1
 # Explanation: The longest palindrome that can be built is "a", whose length is 1.
+
+
+class Solution(object):
+    def longestPalindrome(self, s):
+        letters = {}
+        for char in s:
+            if char not in letters:
+                letters[char] = 1
+            else:
+                letters[char] += 1
+
+        result = 0
+        odd = 0
+
+        # if there is just one time, one character in the entire string
+        if len(letters) == 1:
+            return letters[s[0]]
+
+        for i in letters.values():
+            print(i)
+            # checking if there is more than one character
+            if i > 1:
+                if i % 2 == 0:
+                    result += i
+                else:
+                    result += i-1
+                    odd += 1
+                    return
+            else:
+                odd += 1
+        # adding an odd value to the result, bcs according to the theory, we can
+        if odd > 0:
+            result += 1
+        return result
+
+
+sol = Solution()
+s = "abccccdd"
+s1 = "a"
+sol.longestPalindrome(s)
