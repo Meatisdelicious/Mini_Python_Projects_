@@ -19,7 +19,6 @@
 class Solution(object):
     def longestPalindrome(self, s):
         letters = {}
-
         # converts string to dictionary
         for char in s:
             # if it's not in our dictionary--> add it
@@ -42,12 +41,12 @@ class Solution(object):
                     result += i
                 else:
                     result += i-1
-                    odd += 1
+                    odd_numbers += 1
                     return
             else:
-                odd += 1
+                odd_numbers += 1
         # adding an odd value to the result, bcs according to the theory, we can. (to be symetrical)
-        if odd > 0:
+        if odd_numbers > 0:
             result += 1
         return result
 
