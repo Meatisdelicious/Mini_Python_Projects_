@@ -44,7 +44,7 @@ class Solution(object):
                     return
             else:
                 odd += 1
-        # adding an odd value to the result, bcs according to the theory, we can
+        # adding an odd value to the result, bcs according to the theory, we can. (to be symetrical)
         if odd > 0:
             result += 1
         return result
