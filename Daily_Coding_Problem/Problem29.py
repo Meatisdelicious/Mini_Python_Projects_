@@ -42,7 +42,6 @@ class Solution(object):
                 else:
                     result += i-1
                     odd_numbers += 1
-                    return
             else:
                 odd_numbers += 1
         # adding an odd value to the result, bcs according to the theory, we can. (to be symetrical)
