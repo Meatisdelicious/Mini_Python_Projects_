@@ -14,7 +14,7 @@
 # Input: s = "a"
 # Output: 1
 # Explanation: The longest palindrome that can be built is "a", whose length is 1.
-
+# adding comment
 
 class Solution(object):
     def longestPalindrome(self, s):
