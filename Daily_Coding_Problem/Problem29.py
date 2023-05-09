@@ -28,10 +28,8 @@ class Solution(object):
             # if it is...
             else:
                 letters[char] += 1
-
         result = 0
-        odd = 0
-
+        odd_numbers = 0
         # if there is just one time, one character in the entire string
         if len(letters) == 1:
             return letters[s[0]]
