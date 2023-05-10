@@ -24,3 +24,17 @@ class Solution:
             prev = curr
             curr = curr.next
         return prev
+
+# recursive :
+
+
+class Solution1:
+    def reverseList(self, head):
+        prev, curr = None, head
+        if not head:
+            return None
+        newHead = head
+        if head.next:
+            newHead = self.reverseList(head.next)
+            head.next.next = head
+        head.next = None
