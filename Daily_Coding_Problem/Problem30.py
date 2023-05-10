@@ -13,3 +13,14 @@
 # Example 3:
 # Input: head = []
 # Output: []
+
+class Solution:
+    def reverseList(self, head):
+        prev, curr = None, head
+
+        while curr:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = curr.next
+        return prev
