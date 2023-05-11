@@ -17,6 +17,22 @@ from collections import Counter
 
 class Solution(object):
     def majorityElement(self, nums):
+        maximum_ele = max(nums, key=nums.count)
+        print(maximum_ele)
+        count_max_ele_occur = nums.count(maximum_ele)
+        if count_max_ele_occur > len(nums)/2:
+            return maximum_ele
+
+
+# O(NlogN)
+
+
+class Solution2(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         counter = Counter(nums)
         for key in counter:
             if counter[key] > len(nums)//2:
