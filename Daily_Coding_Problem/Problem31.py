@@ -12,9 +12,18 @@
 # Input: nums = [2,2,1,1,1,2,2]
 # Output: 2
 
+from collections import Counter
+
+
 class Solution(object):
     def majorityElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        counter = Counter(nums)
+        for key in counter:
+            if counter[key] > len(nums)//2:
+                return key
+
+
+nums1 = [3, 2, 3, 3]
+nums2 = [2, 2, 1, 1, 1, 2, 2]
+sol = Solution()
+sol.majorityElement(nums2)
