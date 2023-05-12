@@ -25,8 +25,6 @@ class Solution(object):
 
 
 # O(NlogN)
-
-
 class Solution2(object):
     def majorityElement(self, nums):
         """
