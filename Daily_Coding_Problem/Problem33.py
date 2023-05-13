@@ -39,9 +39,11 @@ class Solution(object):
             if not root :
                 # height of a null tree
                 return -1
+            # to find the height of the left subtree
             left =  dfs(root.left)
             right = dfs(root.right) 
 
+            #equasion to find the height of the tree
             result[0] = 2 + left + right
             return 
     
