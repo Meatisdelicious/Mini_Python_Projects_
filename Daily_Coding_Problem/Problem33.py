@@ -37,7 +37,12 @@ class Solution(object):
         # depht for search (nested function)
         def dfs(root):
             if not root :
+                # height of a null tree
                 return -1
+            left =  dfs(root.left)
+            right = dfs(root.right) 
+
+            result[0] = 2 + left + right
             return 
     
 
