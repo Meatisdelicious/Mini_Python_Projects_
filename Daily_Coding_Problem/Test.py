@@ -5,16 +5,21 @@ class TreeNode:
         self.right = None
 
 def dfs(node):
+    #Si le node est vide, cela stop l'execussion, et il passe à la prochaine node.
     if node is None:
         return
     # Process the current node
     print(node.val)
-    
     # Recursively visit the left subtree
     dfs(node.left)
-    
     # Recursively visit the right subtree
     dfs(node.right)
+
+#         1
+#       /   \
+#      2     3
+#     / \   / \
+#    4   5 6   7
 
 # Create the binary tree
 root = TreeNode(1)
