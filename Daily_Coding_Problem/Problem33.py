@@ -43,9 +43,12 @@ class Solution(object):
             left =  dfs(root.left)
             right = dfs(root.right) 
 
-            #equasion to find the height of the tree
-            result[0] = 2 + left + right
-            return 
+            #equation to find the height of the tree
+            result[0] = max(result[0],2 + left + right)
+            return 1 + max(left,right)
+        
+        dfs(root)
+        return result[0]
     
 
 
