@@ -10,12 +10,23 @@
 # The length of a path between two nodes is represented by the number of edges between them.
 
 
+# ex 1 :
+# Input: root = [1,2,3,4,5]
+# Output: 3
+# Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+
+# ex 2 :
+# Input: root = [1,2]
+# Output: 1
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
 class Solution(object):
     def diameterOfBinaryTree(self, root):
         """
