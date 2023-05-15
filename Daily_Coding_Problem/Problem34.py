@@ -26,9 +26,20 @@ class Solution(object):
         middle_list = []
         index_middle_of_head = int(len(head)/2)
         for i in head[index_middle_of_head:]:
-            print(i)
             middle_list.append(i)
         return middle_list
+
+# good solution, the fist one wasn't for liked lists...
+# Just regular lists, my mistake
+
+
+class Solution1(object):
+    def middleNode(self, head):
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
 
 
 sol = Solution()
