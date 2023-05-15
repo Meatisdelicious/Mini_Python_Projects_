@@ -16,7 +16,6 @@ class Solution(object):
         carry = 0
         # reverse input strings
         a, b = a[::-1], b[::-1]
-
         for i in range(max(len(a), len(b))):
             digitA = ord(a[i]) - ord("O") if i < len(a) else 0
             digitB = b[i] if i < len(b) else 0
