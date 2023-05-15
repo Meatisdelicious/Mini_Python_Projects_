@@ -23,10 +23,17 @@
 #         self.next = next
 class Solution(object):
     def middleNode(self, head):
-
-        return
+        middle_list = []
+        index_middle_of_head = int(len(head)/2)
+        for i in head[index_middle_of_head:]:
+            print(i)
+            middle_list.append(i)
+        return middle_list
 
 
 sol = Solution()
-head = [1, 2, 3, 4, 5, 6]
-sol.middleNode(head)
+head = [1, 2, 3, 4, 5]
+head1 = [1, 2, 3, 4, 5, 6]
+
+print(sol.middleNode(head))
+print(sol.middleNode(head1))
