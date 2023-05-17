@@ -45,7 +45,7 @@ class Solution1(object):
                 duplicates.append(i)
                 count += 1
             else:
-                seen.append(i)
+                seen.add(i)
         print(seen, "---", duplicates, "---", count)
         if count > 0:
             return True
