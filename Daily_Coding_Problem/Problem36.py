@@ -34,7 +34,8 @@ class Solution(object):
             return False
 
 
-class Solution(object):
+# more time efficient solution, works on leetcode, but only beats 5%...
+class Solution1(object):
     def containsDuplicate(self, nums):
         seen = set()
         duplicates = []
@@ -59,3 +60,8 @@ nums3 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 print(sol.containsDuplicate(nums1))
 print(sol.containsDuplicate(nums2))
 print(sol.containsDuplicate(nums3))
+
+sol1 = Solution1()
+print(sol1.containsDuplicate(nums1))
+print(sol1.containsDuplicate(nums2))
+print(sol1.containsDuplicate(nums3))
