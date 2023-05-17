@@ -18,7 +18,7 @@
 
 class Solution(object):
     def containsDuplicate(self, nums):
-        seen = set()
+        seen = []
         duplicates = []
         count = 0
         for i in nums:
@@ -26,9 +26,8 @@ class Solution(object):
                 duplicates.append(i)
                 count += 1
             else:
-                seen.add(i)
+                seen.append(i)
         print(seen, "---", duplicates, "---", count)
-
         if count > 0:
             return True, print(True)
         else:
