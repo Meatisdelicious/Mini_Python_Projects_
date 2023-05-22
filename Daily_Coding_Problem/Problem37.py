@@ -48,3 +48,11 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+
+
+sol = Solution()
+s = "III"
+s1 = "LVIII"
+s2 = "MCMXCIV"
+
+sol.romanToInt(s)
