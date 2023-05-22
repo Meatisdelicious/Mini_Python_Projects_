@@ -47,10 +47,14 @@ class Solution(object):
     def romanToInt(self, s):
         roman_map = {'I': 1, 'V': 5, 'X': 10,
                      'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-        result = 0        
+        result = 0
         for i in range(len(s)):
-            if i+1 <len(s) and roman_map[s[i]] < roman_map(s[i+1]):
-
+            # checking first if the list is not of 1 single value. Than cheking if it the the caracter before
+            # is inferior than the carcater after.
+            if i+1 < len(s) and roman_map[s[i]] < roman_map[s[i+1]]:
+                result -= roman_map[s[i]]
+            else:
+                result += roman_map[s[i]]
         return
 
 
