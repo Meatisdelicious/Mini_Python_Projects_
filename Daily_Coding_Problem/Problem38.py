@@ -1,6 +1,7 @@
 # w3 3 844. Backspace String Compare
 
-# Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+# Given two strings s and t, return true if they are equal
+# when both are typed into empty text editors. '#' means a backspace character.
 
 # Note that after backspacing an empty text, the text will continue empty.
 
@@ -20,10 +21,26 @@
 # Output: false
 # Explanation: s becomes "c" while t becomes "b".
 
-class Solution(object):
-    def backspaceCompare(self, s, t):
+import re
 
-        return
+
+class Solution(object):
+    def backspaceCompare(self, S, T):
+        s_stack = []
+        t_stack = []
+        for s in S:
+            if s == '#' and s_stack:
+                s_stack.pop()
+                continue
+            if s != '#':
+                s_stack.append(s)
+        for t in T:
+            if t == '#' and t_stack:
+                t_stack.pop()
+                continue
+            if t != '#':
+                t_stack.append(t)
+        return s_stack == t_stack
 
 
 s1 = "ab#c"
