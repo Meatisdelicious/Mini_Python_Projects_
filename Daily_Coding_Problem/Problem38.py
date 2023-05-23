@@ -19,3 +19,18 @@
 # Input: s = "a#c", t = "b"
 # Output: false
 # Explanation: s becomes "c" while t becomes "b".
+
+class Solution(object):
+    def backspaceCompare(self, s, t):
+
+        return
+
+
+s1 = "ab#c"
+t1 = "ad#c"
+s2 = "ab##"
+t2 = "c#d#"
+s3 = "a#c"
+t3 = "b"
+sol = Solution()
+print(sol.backspaceCompare(s1, t1))
