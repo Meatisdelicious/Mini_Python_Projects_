@@ -25,3 +25,14 @@
 # 3 --> 11
 # 4 --> 100
 # 5 --> 101
+
+class Solution(object):
+    def countBits(self, n):
+
+        return
+
+
+sol = Solution()
+n = 2
+n1 = 5
+sol.countBits(n)
