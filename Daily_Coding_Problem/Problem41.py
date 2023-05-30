@@ -30,14 +30,16 @@
 
 class Solution(object):
     def hammingWeight(self, n):
-        n_to_string = str(n)
-        print(n_to_string)
-
-        nb_of_1 = n_to_string.count('1')
-        return nb_of_1
+        result = 0
+        while n > 0:
+            print(n)
+            result += n % 2
+            n = n >> 1
+        return result
 
 
 sol = Solution()
-
-n = 00000000000000000000000000001011
-print(sol.hammingWeight(n))
+n = 0o00000000000000000000000000001011
+n2 = 0o00000000000000000000000010000000
+n3 = 0o11111111111111111111111111111101
+print(sol.hammingWeight(n3))
