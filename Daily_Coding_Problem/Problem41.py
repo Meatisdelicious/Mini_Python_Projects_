@@ -27,3 +27,17 @@
 # Input: n = 11111111111111111111111111111101
 # Output: 31
 # Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
+
+class Solution(object):
+    def hammingWeight(self, n):
+        n_to_string = str(n)
+        print(n_to_string)
+
+        nb_of_1 = n_to_string.count('1')
+        return nb_of_1
+
+
+sol = Solution()
+
+n = 00000000000000000000000000001011
+print(sol.hammingWeight(n))
