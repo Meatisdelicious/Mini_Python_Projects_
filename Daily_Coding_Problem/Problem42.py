@@ -15,15 +15,22 @@
 
 class Solution(object):
     def longestCommonPrefix(self, strs):
-        result = []
-        for i in range(len(strs)):
-            for j in range(i + 1, len(strs)):
-                common_elements = list(set(strs[i]) & set(strs[j]))
-                result.extend(common_elements)
-        return result
+        if len(strs) == 0:
+            return ''
+        minlen = len(strs[0])
+        for i in range(1, len(strs)):
+            minlen = min(minlen, len(strs[i]))
+        add = ''
+        for i in range(minlen):
+            si = strs[0][i]
+            for j in range(1, len(strs)):
+                if strs[j][i] != si:
+                    return add
+            add += si
+        return add
 
 
 strs1 = ["flower", "flow", "flight"]
 strs2 = ["dog", "racecar", "car"]
 sol = Solution()
-print(sol.longestCommonPrefix(strs2))
+print(sol.longestCommonPrefix(strs1))
