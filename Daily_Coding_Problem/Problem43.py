@@ -22,15 +22,10 @@
 
 class Solution(object):
     def singleNumber(self, nums):
-        news_list = []
-        for i in range(len(nums)):
-            print("i", nums[i])
-            for j in range(0, len(nums)):
-                if j == i:
-                    
-                print("j", nums[j])
-
-        return
+        res = 0
+        for n in nums:
+            res = n ^ res
+        return res
 
 
 nums1 = [2, 2, 1]
