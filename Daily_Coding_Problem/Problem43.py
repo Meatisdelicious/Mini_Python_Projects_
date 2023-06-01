@@ -18,3 +18,23 @@
 # Example 3:
 # Input: nums = [1]
 # Output: 1
+
+
+class Solution(object):
+    def singleNumber(self, nums):
+        news_list = []
+        for i in range(len(nums)):
+            print("i", nums[i])
+            for j in range(0, len(nums)):
+                if j == i:
+                    
+                print("j", nums[j])
+
+        return
+
+
+nums1 = [2, 2, 1]
+nums2 = [4, 1, 2, 1, 2]
+nums3 = [1]
+sol = Solution()
+print(sol.singleNumber(nums1))
