@@ -13,3 +13,18 @@
 # Example 2:
 # Input: nums = [0]
 # Output: [0]
+
+class Solution(object):
+    def moveZeroes(self, nums):
+        count = 0
+        for i in nums:
+            if i == 0:
+                nums.remove(i)
+                nums.append(i)
+        return nums
+
+
+nums1 = [0, 1, 0, 3, 12]
+nums2 = [0]
+sol = Solution()
+sol.moveZeroes(nums2)
