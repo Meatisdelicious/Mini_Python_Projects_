@@ -24,3 +24,21 @@
 # Explanation: n = 9 since there are 9 numbers,
 # so all numbers are in the range [0,9]. 8 is the missing
 # number in the range since it does not appear in nums.
+import collections
+
+
+class Solution(object):
+    def missingNumber(nums):
+        c = collections.Counter(nums)
+        N = len(nums)
+
+        for i in range(N+1):
+            if i not in c:
+                return i
+
+
+nums1 = [3, 0, 1]
+nums2 = [0, 1]
+nums3 = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+sol = Solution()
+sol.missingNumber(nums1)
