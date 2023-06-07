@@ -8,6 +8,7 @@ ursina
 
 # threes, binary threes
 # linked lists
+
 # nodes
 # binary bits... 0,1..
 # stacks
