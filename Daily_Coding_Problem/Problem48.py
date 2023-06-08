@@ -19,3 +19,24 @@
 # Input: x = 10
 # Output: false
 # Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+class Solution(object):
+    def isPalindrome(self, x):
+        x = str(x)
+        if x == x[::-1]:
+            print("true")
+            return True
+        else:
+            print("false")
+
+            return False
+
+
+x1 = 121
+x2 = -121
+x3 = 10
+
+sol = Solution()
+sol.isPalindrome(x1)
+sol.isPalindrome(x2)
+sol.isPalindrome(x3)
