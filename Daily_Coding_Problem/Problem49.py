@@ -12,3 +12,14 @@
 # Input: nums = [1,3]
 # Output: [3,1]
 # Explanation: [1,null,3] and [3,1] are both height-balanced BSTs.
+
+class Solution(object):
+    def sortedArrayToBST(self, nums):
+
+        return
+
+
+nums1 = [-10, -3, 0, 5, 9]
+nums2 = [1, 3]
+sol = Solution()
+sol.sortedArrayToBST(nums1)
