@@ -25,3 +25,17 @@
 # Explanation: The input binary string 11111111111111111111111111111101
 # represents the unsigned integer 4294967293, so return 3221225471 which
 # its binary representation is 10111111111111111111111111111111.
+
+class Solution:
+    def reverseBits(self, n):
+        res = 0
+        for i in range(32):
+            bit = (n >> i) & 1
+            res = res | (bit << (31-1))
+        return res
+
+
+n = 11111111111111111111111111111101
+# n1 = 00000010100101000001111010011100
+sol = Solution()
+sol.reverseBits(n)
