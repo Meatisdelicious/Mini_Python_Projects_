@@ -27,12 +27,16 @@
 #         self.right = right
 class Solution(object):
     def isSubtree(self, s, t):
+        if not t:
+            return True
+        if not s:
+            return False
+        if self.sameTree(s, t):
+            return True
 
-
-    def sameTree(self,s,t):
+    def sameTree(self, s, t):
         if not s and not t:
             return True
         if s and t and s.val == t.val:
-            return (self.sameTree(s.left,t.left) and self.sameTree(s.right,t.right))
-        
-        return 
+            return (self.sameTree(s.left, t.left) and self.sameTree(s.right, t.right))
+        return False
