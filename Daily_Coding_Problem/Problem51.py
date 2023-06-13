@@ -33,6 +33,7 @@ class Solution(object):
             return False
         if self.sameTree(s, t):
             return True
+        return (self.isSubtree(s.left, t) or self.isSubtree(s.right, t))
 
     def sameTree(self, s, t):
         if not s and not t:
