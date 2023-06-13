@@ -5,10 +5,8 @@ ursina
 # lists, arrays, stacks a tiny bit
 
 # Shit i'm not good at all at : 
-
 # threes, binary threes
 # linked lists
-
 # nodes
 # binary bits... 0,1..
 # stacks
