@@ -14,10 +14,18 @@
 # Input: nums = [-7,-3,2,3,11]
 # Output: [4,9,9,49,121]
 
+import numpy as np
+
 
 class Solution(object):
     def sortedSquares(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
+        array_nums = np.array(nums)
+        squared_array = np.square(array_nums)
+        sorted_array = np.sort(squared_array)
+        return sorted_array
+
+
+nums1 = [-4, -1, 0, 3, 10]
+nums2 = [-7, -3, 2, 3, 11]
+sol = Solution()
+sol.sortedSquares(nums1)

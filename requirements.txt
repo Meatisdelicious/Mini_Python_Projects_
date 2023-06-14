@@ -1,5 +1,5 @@
 ursina
-
+numpy
 
 # Stuff i'm good at : 
 # lists, arrays, stacks a tiny bit
