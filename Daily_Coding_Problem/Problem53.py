@@ -19,3 +19,15 @@
 # Input: nums = [5,4,-1,7,8]
 # Output: 23
 # Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+
+class Solution(object):
+    def maxSubArray(self, nums):
+        for idx in range(1, len(nums)):
+            if nums[idx-1] > 0:
+                nums[idx] += nums[idx-1]
+        return max(nums)
+
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+sol = Solution()
+print(sol.maxSubArray(nums))
