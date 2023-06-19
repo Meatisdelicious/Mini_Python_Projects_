@@ -11,8 +11,6 @@
 # not have any overlapping intervals (merge overlapping intervals if necessary).
 
 # Return intervals after the insertion.
-
-
 # Example 1:
 # Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
 # Output: [[1,5],[6,9]]
