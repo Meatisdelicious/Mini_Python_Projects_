@@ -33,11 +33,11 @@ class Solution(object):
         for i,point in enumerate(points) :
             x = point[0]
             y = point[1]
-            print("x,y :",x,",",y)
+            # print("x,y :",x,",",y)
             distanceOrigin = math.sqrt((x**2)+(y**2))
-            print("distanceOrigin :",distanceOrigin)
+            # print("distanceOrigin :",distanceOrigin)
             distances.append((i, distanceOrigin))
-        print("distances_list :",distances)
+        # print("distances_list :",distances)
         # sort the list by index
         distances.sort(key=lambda x: x[1])  
         final_result_list = []
@@ -46,7 +46,7 @@ class Solution(object):
             index = wining_index_result[0]
             # search id in original list and return it 
             final_result_list.append(points[index])
-        print("final_result_list :",final_result_list)
+        # print("final_result_list :",final_result_list)
         return final_result_list
     
 points = [[1,3],[-2,2]]
