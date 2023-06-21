@@ -25,15 +25,34 @@
 # Output: [[3,3],[-2,4]]
 # Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 
+import math 
 
 class Solution(object):
     def kClosest(self, points, k):
-        """
-        :type points: List[List[int]]
-        :type k: int
-        :rtype: List[List[int]]
-        """
-        return 
+        distances = []
+        for i,point in enumerate(points) :
+            x = point[0]
+            y = point[1]
+            print("x,y :",x,",",y)
+            distanceOrigin = math.sqrt((x**2)+(y**2))
+            print("distanceOrigin :",distanceOrigin)
+            distances.append((i, distanceOrigin))
+        print("distances_list :",distances)
+        # sort the list by index
+        distances.sort(key=lambda x: x[1])  
+        final_result_list = []
+        #  retrieve id in list
+        for i,wining_index_result in enumerate(distances[:k]):
+            index = wining_index_result[0]
+            # search id in original list and return it 
+            final_result_list.append(points[index])
+        print("final_result_list :",final_result_list)
+        return final_result_list
     
+points = [[1,3],[-2,2]]
+k = 1
+points2 = [[3,3],[5,-1],[-2,4]]
+k2 = 2
+
 sol = Solution()
-sol.kClosest()
+sol.kClosest(points2,k2)
