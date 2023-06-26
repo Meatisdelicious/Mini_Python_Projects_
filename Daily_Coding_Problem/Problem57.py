@@ -1,5 +1,4 @@
-# w5 15. 3Sum
-
+# w6 15. 3Sum
 
 # Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 
 # such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
@@ -24,3 +23,18 @@
 # Input: nums = [0,0,0]
 # Output: [[0,0,0]]
 # Explanation: The only possible triplet sums up to 0.
+
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        return
+
+nums1 = [-1,0,1,2,-1,-4]
+nums2 = [0,1,1]
+nums3 = [0,0,0]
+
+sol = Solution()
+sol.threeSum(nums1)
