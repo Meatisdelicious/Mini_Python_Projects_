@@ -1,4 +1,4 @@
-# 150. Evaluate Reverse Polish Notation
+# w5 150. Evaluate Reverse Polish Notation
 
 # You are given an array of strings tokens that represents an arithmetic expression 
 # in a Reverse Polish Notation.
@@ -34,3 +34,14 @@
 # = (0 + 17) + 5
 # = 17 + 5
 # = 22
+
+
+class Solution(object):
+    def evalRPN(self, tokens):
+        return
+    
+tokens = ["2","1","+","3","*"]
+tokens1 = ["4","13","5","/","+"]
+tokens2 = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+sol = Solution()
+sol.evalRPN(tokens)
