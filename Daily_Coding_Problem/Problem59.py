@@ -30,24 +30,29 @@
 # trie.startsWith("app"); // return True
 # trie.insert("app");
 # trie.search("app");     // return True
-
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.endOfWord = False
 
 class Trie(object):
-
     def __init__(self):
-        wasa=0
+        self.root = TrieNode()
+
     def insert(self, word):
-        """
-        :type word: str
-        :rtype: None
-        """
-        
+        cur = self.root
+        for c in word :
+            if c not in cur.children :
+                cur.children[c] = TrieNode()
+            cur = cur.children[c]
+        cur.endOfWord = True        
 
     def search(self, word):
-        """
-        :type word: str
-        :rtype: bool
-        """
+        for words in list:
+            if words == word :
+                return True
+        else :
+            return False
         
 
     def startsWith(self, prefix):
@@ -59,8 +64,8 @@ class Trie(object):
 
 
 # Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
-# param_2 = obj.search(word)
-# param_3 = obj.startsWith(prefix)
-
+obj = Trie()
+word = ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+obj.insert(word)
+param_2 = obj.search(word)
+param_3 = obj.startsWith(prefix)
