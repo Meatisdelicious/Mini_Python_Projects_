@@ -48,19 +48,21 @@ class Trie(object):
         cur.endOfWord = True        
 
     def search(self, word):
-        for words in list:
-            if words == word :
-                return True
-        else :
-            return False
-        
+        cur = self.root
+        for c in word:
+            if c not in cur.childre:
+                return False
+            cur = cur.children[c]
+        return cur.endOfWord
+     
 
     def startsWith(self, prefix):
-        """
-        :type prefix: str
-        :rtype: bool
-        """
-        
+        cur  = self.root
+        for c in prefix :
+            if c not in cur.children:
+                return False
+            cur = cur.children[c]
+        return True 
 
 
 # Your Trie object will be instantiated and called as such:
@@ -68,4 +70,4 @@ obj = Trie()
 word = ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
 obj.insert(word)
 param_2 = obj.search(word)
-param_3 = obj.startsWith(prefix)
+# param_3 = obj.startsWith(prefix)
