@@ -1,7 +1,5 @@
 # w5 238. Product of Array Except Self
 
-
-
 # Given an integer array nums, return an array 
 # answer such that answer[i] is equal to the product of all 
 # the elements of nums except nums[i].
@@ -20,3 +18,15 @@
 # Example 2:
 # Input: nums = [-1,1,0,-3,3]
 # Output: [0,0,9,0,0]
+
+
+class Solution(object):
+    def productExceptSelf(self, nums):
+        
+        
+        return 
+    
+nums = [1,2,3,4]
+nums2 = [-1,1,0,-3,3]
+obj = Solution()
+obj.productExceptSelf(nums)
