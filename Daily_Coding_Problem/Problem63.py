@@ -34,8 +34,6 @@
 class Solution(object):
     def combinationSum(self, candidates, target):
         res = []
-
-
         def dfs(i,cur,total):
             if total == target:
                 return
@@ -47,5 +45,4 @@ class Solution(object):
             dfs(i+1,cur,total)
 
         dfs(0,[],0)
-
         return 
