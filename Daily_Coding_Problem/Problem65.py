@@ -23,3 +23,15 @@
 # Input: nums = [0,0,0]
 # Output: [[0,0,0]]
 # Explanation: The only possible triplet sums up to 0.
+
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        return
+nums1 = [-1,0,1,2,-1,-4]
+nums2 = [0,1,1]
+sol = Solution()
+print(sol.threeSum(nums1))
