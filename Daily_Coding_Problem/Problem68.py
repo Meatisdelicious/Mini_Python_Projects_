@@ -18,7 +18,8 @@
 class Solution(object):
     def merge(self, intervals_list):
         stack = []
-        for start_current, end_current in intervals_list:
+        
+        for start_current, end_current in sorted(intervals_list):
             if stack and stack[-1][1] >= start_current:
                 last_start, last_end = stack.pop()
                 print("last_start :",last_start,"last_end",last_end)
@@ -27,7 +28,6 @@ class Solution(object):
                 stack.append(merged_interval)
             else:
                 stack.append((start_current, end_current))
-
         print("final stack:", stack)
         return stack
     
