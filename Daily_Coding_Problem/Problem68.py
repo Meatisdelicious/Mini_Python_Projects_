@@ -18,17 +18,20 @@
 class Solution(object):
     def merge(self, intervals_list):
         stack = []
-        for start, end in intervals_list :
-            stack.append((start,end))
-            # "stack" = beginning of the previous stack, and "stack[-1][1]" = the end of the previous stack 
-            if stack and stack[-1][1] >= start :
-                print("stack :",stack)
-                print("stack[-1][1] :",stack[-1][1])
-                print("start :",start)
+        for start_current, end_current in intervals_list:
+            if stack and stack[-1][1] >= start_current:
+                last_start, last_end = stack.pop()
+                print("last_start :",last_start,"last_end",last_end)
+                merged_interval = (min(last_start, start_current), max(last_end, end_current))
+                print("merged_interval",merged_interval)
+                stack.append(merged_interval)
+            else:
+                stack.append((start_current, end_current))
 
-        return stack, print("stack :",stack)
+        print("final stack:", stack)
+        return stack
     
 intervals1 = [[1,3],[2,6],[8,10],[15,18]]
 intervals2 = [[1,4],[4,5]]
 sol = Solution()
-sol.merge(intervals1)
+sol.merge(intervals2)
