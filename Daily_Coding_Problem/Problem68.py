@@ -30,7 +30,7 @@ class Solution(object):
                 stack.append((start_current, end_current))
         print("final stack:", stack)
         return stack
-    
+
 intervals1 = [[1,3],[2,6],[8,10],[15,18]]
 intervals2 = [[1,4],[4,5]]
 sol = Solution()
