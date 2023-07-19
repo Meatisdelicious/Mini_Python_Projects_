@@ -23,10 +23,18 @@
 
 class Solution(object):
     def maxArea(self, height):
-        
-        return 
+        res = 0
+        for left in range(len(height)):
+            print("left :",left)
+            for right in range(left+1,len(height)): 
+                # print("right :",right)
+                # the minimum height of left and right, otherwise it would spill
+                area = (right - left) * min(height[left],height[right])
+                res = max(res,area)
+    
+        return res
     
 height1 = [1,8,6,2,5,4,8,3,7]
 height2 = [1,1]
 sol = Solution()
-sol.maxArea(height1)
+print(sol.maxArea(height1))
