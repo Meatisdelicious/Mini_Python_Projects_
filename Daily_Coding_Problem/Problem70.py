@@ -20,3 +20,13 @@
 # Example 2:
 # Input: height = [1,1]
 # Output: 1
+
+class Solution(object):
+    def maxArea(self, height):
+        
+        return 
+    
+height1 = [1,8,6,2,5,4,8,3,7]
+height2 = [1,1]
+sol = Solution()
+sol.maxArea(height1)
