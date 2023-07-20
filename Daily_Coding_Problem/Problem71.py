@@ -34,3 +34,19 @@
 # Travel to station 1. Your tank = 3 - 3 + 3 = 3
 # You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.
 # Therefore, you can't travel around the circuit once no matter where you start.
+
+
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        if sum(gas)<sum(cost):
+            return -1
+        total = 0
+        res = 0
+        for i in range(len(gas)):
+            total+=(gas[i]-cost[-i])
+
+            if total < 0:
+                total=0
+                start=i+1
+
+        return start
