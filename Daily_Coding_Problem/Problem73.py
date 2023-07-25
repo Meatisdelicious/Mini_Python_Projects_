@@ -16,3 +16,19 @@
 # Explanation: 
 # rotate 1 steps to the right: [99,-1,-100,3]
 # rotate 2 steps to the right: [3,99,-1,-100]
+
+class Solution(object):
+    def rotate(self, nums, k):
+        elements_before_k = nums[:k]
+        print("elements_before_k",elements_before_k)
+        elements_after_k = nums[k:]
+        print("elements_after_k",elements_after_k)
+        result = elements_after_k+elements_before_k
+        return result,print(result)
+nums = [1,2,3,4,5,6,7]
+k = 3
+nums1 = [-1,-100,3,99]
+k1 = 2
+sol = Solution()
+sol.rotate(nums,k)
+sol.rotate(nums1,k1)
