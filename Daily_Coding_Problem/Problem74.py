@@ -27,6 +27,7 @@ class Solution(object):
             count+=1 if nums else -1
             if count in seen_at:
                 ans=max(ans,i-seen_at[count])
+                
             else :
                 seen_at[count]=i
         return ans  
