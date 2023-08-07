@@ -22,11 +22,6 @@
 
 class Solution(object):
     def threeSumClosest(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
         nums.sort()
         closest_sum = 2**31-1
         for i in range(len(nums)):
