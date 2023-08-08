@@ -1,4 +1,4 @@
-# w9 16. 3Sum Closest
+# w10 16. 3Sum Closest
 
 # Given an integer array nums of length n and an integer target, 
 # find three integers in nums such that the sum is closest to target.
