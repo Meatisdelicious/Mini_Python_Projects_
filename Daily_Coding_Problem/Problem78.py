@@ -27,4 +27,6 @@
 
 class Solution(object):
     def firstBadVersion(self, n):
+
+        
         return
