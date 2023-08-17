@@ -28,5 +28,5 @@
 class Solution(object):
     def firstBadVersion(self, n):
 
-        
+        print("wssaa")
         return
