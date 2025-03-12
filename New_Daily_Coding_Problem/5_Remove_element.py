@@ -15,6 +15,8 @@ class Solution(object):
                 nums.pop(i)
                 continue
         return len(nums)
+    
+    # aoazn
 
 sol=Solution()
 nums = [3,2,2,3]
