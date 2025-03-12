@@ -15,7 +15,7 @@ class Solution(object):
                 nums.pop(i)
                 continue
         return len(nums)
-    
+    # aldax
     # aoazn
 
 sol=Solution()
