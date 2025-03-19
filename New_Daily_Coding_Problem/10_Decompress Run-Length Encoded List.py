@@ -13,4 +13,5 @@ class Solution(object):
 nums1 = [1,2,3,4]
 nums2 = [1,1,2,3]
 sol=Solution()
+print(sol.wasa(nums1))
 print(sol.wasa(nums2))
