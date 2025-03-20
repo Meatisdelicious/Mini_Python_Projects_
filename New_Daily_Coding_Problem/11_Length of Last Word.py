@@ -12,6 +12,7 @@ class Solution(object):
             print(letter)
             count+=1
         return count
+    
 s = "Hello World"
 s1 = "   fly me   to   the moon  " 
 s2 = "luffy is still joyboy"
